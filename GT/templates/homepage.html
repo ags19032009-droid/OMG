@@ -9,8 +9,26 @@
     </title>
 </head>
 <body>
-{{ block body }}
+{% block body %}
+
 <h1>Hello World!</h1>
-<a href="{{ url_for('perfil', usuario = 'Gabriel' }}">Perfil</a>
+
+<a href="{{ url_for('perfil', usuario='Gabriel') }}">Perfil</a>
+<a href="{{ url_for('criarconta') }}">Criar Conta</a>
+
+{% block formulario %}
+<form method="POST">
+
+    {{ form.csrf_token }}
+
+    {{ form.email.label }}
+    {{ form.email() }}
+
+    {{ form.senha.label }}
+    {{ form.senha() }}
+
+    {{ form.botao_confirmacao() }}
+</form>
+{% endblock %}
 {% endblock %}
 </body>
