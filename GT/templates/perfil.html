@@ -7,4 +7,5 @@ Perfil - {{usuario}}
 {% block body %}
 <h1>Esse é o perfil  do {{usuario.nome}}</h1>
 <a href="{{ url_for('homepage') }}">Sair</a>
+<a href="{{ url_for('tarefas') }}">Ir para Tarefas</a>
 {% endblock %}

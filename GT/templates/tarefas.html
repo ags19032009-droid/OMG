@@ -1,0 +1,19 @@
+<h1>Criar tarefa</h1>
+
+<form method="POST">
+
+    {{ form.csrf_token }}
+
+    <p>{{ form.titulo.label }}</p>
+    <p>{{ form.titulo() }}</p>
+
+    <p>{{ form.descricao.label }}</p>
+    <p>{{ form.descricao() }}</p>
+
+
+    <p>{{ form.responsavel.label }}</p>
+    <p>{{ form.responsavel() }}</p>
+
+    <p>{{ form.botao_confirmacao() }}</p>
+
+</form>
